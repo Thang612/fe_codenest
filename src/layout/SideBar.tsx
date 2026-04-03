@@ -1,9 +1,10 @@
 import { LayoutDashboard, LibraryBig } from 'lucide-react'
 import LogoCodeNest from '../assets/logo_codenest.png'
+import ThemeToggle from '../common/ThemeToggle'
 
 const SideBar = () => {
     return (
-        <aside className='bg-surface h-full rounded-2xl flex flex-col  justify-between items-center '>
+        <aside className='bg-surface h-full rounded-2xl flex flex-col  justify-between items-center shadow-lg shadow-primary/10 '>
             <div className='h-full'>
                 <img src={LogoCodeNest} className="mt-2 w-[70%] mx-auto" alt="CodeNest Logo" />
                 <div className='h-full mt-2 w-full   flex flex-col gap-1'>
@@ -30,7 +31,9 @@ const SideBar = () => {
                 </div>
             </div>
 
-            <div className='h-fit w-full bg-red-600'></div>
+            <div className='h-fit w-full flex justify-end mr-6  mb-3'>
+                <ThemeToggle />
+            </div>
         </aside>
     )
 }
