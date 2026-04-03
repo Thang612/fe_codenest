@@ -1,0 +1,10 @@
+
+const Mainlayout = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <section className='bg-surface rounded-2xl h-full p-6'>
+            {children}
+        </section>
+    )
+}
+
+export default Mainlayout
