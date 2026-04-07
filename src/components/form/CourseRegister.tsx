@@ -10,7 +10,7 @@ const CourseRegister = () => {
     // 2. Hàm xử lý khi submit form
     const onSubmit = async (data: any) => {
         // Tạo một promise để toast tracking
-        const promise = axios.post("http://localhost:3000/course", data);
+        const promise = axios.post(`${import.meta.env.VITE_API_URL}/course`, data);
 
         toast.promise(promise, {
             loading: "Đang tạo khóa học...",

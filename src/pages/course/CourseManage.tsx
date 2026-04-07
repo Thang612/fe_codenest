@@ -16,7 +16,7 @@ const CourseManage = () => {
 
     const handleGetCourse = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/course');
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/course`);
             setCourse(response.data);
         } catch (error) {
             console.error('Error fetching courses:', error);
