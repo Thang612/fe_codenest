@@ -1,6 +1,7 @@
 import './App.css'
 import SideBar from './layout/SideBar'
-import CourseManage from './pages/CourseManage'
+import CourseManage from './pages/course/CourseManage'
+import { Toaster } from 'sonner';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <SideBar />
         <CourseManage />
       </main>
+      <Toaster />
     </>
   )
 }

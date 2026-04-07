@@ -7,15 +7,21 @@
   --color-surface: var(--surface);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
+  --color-card: var(--card);
 }
 
 /* ===== LIGHT MODE ===== */
 :root {
   --primary: #E33336;
-  --bg: #F5F7FB;              /* nền app */
-  --surface: #ffffff;         /* card, modal */
-  --text-primary: #151516;    /* chữ chính */
-  --text-secondary: #4B5563;  /* chữ phụ */
+  --bg: #F5F7FB;
+  /* nền app */
+  --surface: #ffffff;
+  /* card, modal */
+  --text-primary: #151516;
+  /* chữ chính */
+  --text-secondary: #4B5563;
+  /* chữ phụ */
+  --card: #ffffff;
 }
 
 /* ===== DARK MODE ===== */
@@ -25,9 +31,27 @@
   --surface: #14121A;
   --text-primary: #ffffff;
   --text-secondary: #9CA3AF;
+  --card: #29292D;
 }
 
 /* global */
 body {
   @apply bg-bg text-text-primary;
+}
+
+.input_primary {
+  @apply block w-full px-3 py-2 ring-gray-500 ring-1 rounded-md focus:outline-none focus:ring-primary;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }

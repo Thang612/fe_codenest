@@ -5,7 +5,6 @@ const ThemeToggle = () => {
     const [isDark, setIsDark] = useState(false);
 
     const toggleDarkMode = () => {
-        // Logic của bạn
         document.documentElement.classList.toggle('dark');
         setIsDark(!isDark);
     };

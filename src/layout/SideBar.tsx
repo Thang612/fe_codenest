@@ -9,7 +9,7 @@ const SideBar = () => {
                 <img src={LogoCodeNest} className="mt-2 w-[70%] mx-auto" alt="CodeNest Logo" />
                 <div className='h-full mt-2 w-full   flex flex-col gap-1'>
                     {/* item nav  */}
-                    <div className='group flex gap-2 text-primary h-fit items-stretch hover:bg-primary/10 transition-colors duration-200 cursor-pointer'>
+                    <div className='group flex gap-2 text-primary h-fit items-stretch hover:bg-linear-to-r hover:from-primary/20 hover:to-transparent transition-colors duration-200 cursor-pointer'>
                         <div className='w-1 rounded-2xl bg-primary opacity-0 group-hover:opacity-100 transition-all duration-200'></div>
                         <div className='flex gap-2 items-center text-text-primary group-hover:text-primary p-2'>
                             <LayoutDashboard />
