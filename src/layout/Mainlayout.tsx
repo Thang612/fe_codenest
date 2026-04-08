@@ -1,7 +1,7 @@
 
 const Mainlayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <section className='bg-surface rounded-2xl h-full p-6  shadow-lg shadow-primary/10'>
+        <section className='bg-surface rounded-2xl max-h-screen overflow-y-auto p-6  shadow-lg shadow-primary/10'>
             {children}
         </section>
     )
