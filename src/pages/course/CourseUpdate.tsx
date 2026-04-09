@@ -8,6 +8,7 @@ import type { Course } from '../../configs/types';
 import NotFound from '../NotFound';
 import { courseStatusConfig } from '../../configs/config';
 import { EStatus } from '../../configs/enum';
+import CourseLessons from './CourseLessons';
 
 const CourseUpdate = () => {
     const { id } = useParams();
@@ -131,7 +132,7 @@ const CourseUpdate = () => {
 
                     {/* Phần Tiêu đề */}
                     <div className="space-y-2">
-                        <label className="text-sm font-bold ">Tiêu đề khóa học</label>
+                        <label className="text-sm ">Tiêu đề khóa học</label>
                         {editingField !== 'name' ? (
                             <div className="flex group items-center justify-between p-3 bg-bg rounded-lg border border-transparent hover:border-primary/30 transition-all">
                                 <h2 className="font-semibold text-xl">{course?.name || "Chưa có tiêu đề"}</h2>
@@ -220,13 +221,10 @@ const CourseUpdate = () => {
                             </div>
                         )}
                     </div>
-                    <div className='border-t pt-3 border-gray-300'>
-                        <div className="flex items-center gap-4">
-                            <h2 >Giáo trình</h2>
-                            <button className="px-4 py-1 bg-primary rounded-md hover:bg-primary/90 text-white">Thêm bài học</button>
-                        </div>
 
-                    </div>
+                    {course && <CourseLessons courseId={course._id} />}
+
+
                 </div>
 
                 {/* Sidebar bổ sung */}
