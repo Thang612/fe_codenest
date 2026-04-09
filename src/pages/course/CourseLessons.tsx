@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../common/Accordion';
 import axios from 'axios';
 import { toast } from 'sonner';
+import LessonItem from './LessonItem';
 
 const CourseLessons = ({ courseId }: { courseId: string }) => {
     const [lessons, setLesssons] = useState<any[]>([])
@@ -49,16 +49,7 @@ const CourseLessons = ({ courseId }: { courseId: string }) => {
             <div className='mt-2 flex flex-col gap-2'>
                 {lessons && lessons.map((lesson) => {
                     return (
-                        <Accordion key={lesson._id} defaultValue={undefined}>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger>
-                                    {lesson.name}
-                                </AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. It adheres to the WAI-ARIA design pattern.
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
+                        <LessonItem lesson={lesson} />
                     )
                 })}
 
