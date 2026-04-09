@@ -1,4 +1,4 @@
-import { ArrowBigDown, ArrowBigUp, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { createContext, useContext, useState } from "react";
 
 type CtxType = {
