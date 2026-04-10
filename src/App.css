@@ -1,0 +1,31 @@
+.content_editor ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content_editor ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.content_editor h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content_editor h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content_editor p {
+    margin: 8px 0;
+}
+
+.content_editor ul {
+    margin: 8px 0;
+}
+
+.content_editor li {
+    margin-left: 16px;
+}

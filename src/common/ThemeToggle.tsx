@@ -1,17 +1,16 @@
-import { useState } from 'react';
 import { Sun, Moon } from 'lucide-react'; // Sử dụng thư viện icon lucide-react
+import useThemeStore from '../stores/theme.store';
+import { useEffect } from 'react';
 
 const ThemeToggle = () => {
-    const [isDark, setIsDark] = useState(false);
+    const { isDark, toggle } = useThemeStore();
 
-    const toggleDarkMode = () => {
-        document.documentElement.classList.toggle('dark');
-        setIsDark(!isDark);
-    };
-
+    useEffect(() => {
+        document.documentElement.classList.toggle("dark", isDark);
+    }, [isDark]);
     return (
         <div
-            onClick={toggleDarkMode}
+            onClick={toggle}
             className="relative flex items-center w-20 h-8 p-1 bg-bg rounded-full cursor-pointer transition-colors duration-300 border border-gray-300 dark:border-gray-600"
         >
             {/* Nút tròn trượt (Pill) */}
